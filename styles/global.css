@@ -34,3 +34,8 @@ header .logo {
 main {
     padding: 20px;
 }
+.pokemonCards {
+    background-color: white;
+    width: 300px;
+    margin: 10px;
+}

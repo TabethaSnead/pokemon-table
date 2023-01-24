@@ -10,7 +10,7 @@ export async function getAllPokemon() {
     return data;
 }
 
-export async function getPokemonTypes() {
-    const { data, error } = await client.from('pokemon_type').select('*');
+export async function getPokemonTypes(id) {
+    const { data, error } = await client.from('pokemon').select('*, pokemon_type(id)').eq('id', id);
     return data;
 }
