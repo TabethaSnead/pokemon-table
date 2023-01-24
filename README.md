@@ -1,3 +1,5 @@
+![Wireframe of pokemon-table] (./assets/wireframe.png)
+
 ## The Golden Rule:
 
 🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁
@@ -25,3 +27,24 @@ Additional considerations:
     -   What needs to live in a persistence layer?
 -   Is there some state we need to initialize?
 -   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be reused?)
+
+## HTML
+
+page 1
+-Header- title of page
+-div- empty div to append all info from table into
+-window.eventListener
+div.eventListener(click)
+-href to page 2 detail page
+page 2
+-empty div to append 1 items information
+-window.eventListener
+-fetch this particular pokemon data from supabase
+-use search params
+-const id = data.get('id')
+-put in state
+
+## STATE
+
+-pokemonsData
+-pokemonData
