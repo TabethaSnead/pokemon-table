@@ -9,12 +9,15 @@ export async function getAllPokemon() {
     // console.log(data);
     return data;
 }
-export async function getPokemonById(id) {
-    const { data, error } = await client.from('pokemon').select('*').eq('id', id);
-    return data;
-}
+// export async function getPokemonById(id) {
+//     const { data, error } = await client.from('pokemon').select('*').eq('id', id);
+//     return data;
+// }
 
-export async function getPokemonTypes(id) {
-    const { data, error } = await client.from('pokemon').select('*, pokemon_type(id)').eq('id', id);
+export async function getPokemonById(id) {
+    const { data, error } = await client
+        .from('pokemon')
+        .select('*, pokemon_type(type)')
+        .eq('id', id);
     return data;
 }
