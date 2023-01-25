@@ -1,5 +1,5 @@
 /* Imports */
-import { getAllPokemon, getPokemonTypes } from './fetch-utils.js';
+import { getAllPokemon } from './fetch-utils.js';
 import { renderPokemonCard } from './render-utils.js';
 /* Get DOM Elements */
 const pokemonList = document.getElementById('pokemon-list-page');
