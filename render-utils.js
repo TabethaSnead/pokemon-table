@@ -3,14 +3,18 @@ export function renderPokemonCard(pokemon) {
     const nameEl = document.createElement('div');
     const IdNum = document.createElement('div');
     const img = document.createElement('img');
+    const a = document.createElement('a');
 
     div.classList.add('pokemonCards');
 
     nameEl.textContent = pokemon.name;
     img.src = `../assets/pokemon_img/${pokemon.name}.png`;
-    IdNum.textContent = `This pokemons ID number is${pokemon.id_number}`;
+    IdNum.textContent = `This pokemons ID number is ${pokemon.id_number}`;
+    a.href = `../details/?id=${pokemon.id_number}`;
+
     div.append(nameEl, img, IdNum);
-    return div;
+    a.append(div);
+    return a;
 }
 
 export function renderPokemonDetail(pokemon) {
@@ -26,11 +30,11 @@ export function renderPokemonDetail(pokemon) {
     div.classList.add('pokemonDetails');
 
     nameEl.textContent = pokemon.name;
-    IdNum.textContent = `This pokemons ID number is${pokemon.id_number}`;
+    IdNum.textContent = `This pokemons ID number is ${pokemon.id_number}`;
     descriptionEl.textContent = pokemon.description;
-    nextEvolution.textContent = `This Pokemons next evolutions ID number is${pokemon.next_evolution}`;
+    nextEvolution.textContent = `This Pokemons next evolutions ID number is ${pokemon.next_evolution}`;
     type.textContent = pokemon.pokemon_type.type;
-    img.src = `../assets/pokemon_img${pokemon.name}`;
+    img.src = `../assets/pokemon_img/${pokemon.name}.png`;
 
     nameAndId.append(nameEl, IdNum);
     div.append(nameAndId, img, descriptionEl, type, nextEvolution);
